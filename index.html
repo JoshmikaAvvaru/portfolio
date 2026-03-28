@@ -1,20 +1,31 @@
-<nav style="background:#020617; padding:15px; text-align:center;">
-  <a href="#about" style="margin:10px; color:white;">About</a>
-  <a href="#skills" style="margin:10px; color:white;">Skills</a>
-  <a href="#projects" style="margin:10px; color:white;">Projects</a>
-  <a href="#contact" style="margin:10px; color:white;">Contact</a>
-</nav>
-
-<h1>Joshmika Avvaru</h1>
+<!DOCTYPE html>
+<html>
 
 <head>
+  <title>Joshmika Portfolio</title>
 
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
       font-family: Arial;
       background: #0f172a;
       color: white;
+    }
+
+    nav {
+      background: #020617;
+      padding: 15px;
+      text-align: center;
+    }
+
+    nav a {
+      margin: 10px;
+      color: white;
+      text-decoration: none;
     }
 
     header {
@@ -29,10 +40,6 @@
       margin: auto;
     }
 
-    html {
-  scroll-behavior: smooth;
-}
-
     .card {
       background: #1e293b;
       padding: 20px;
@@ -45,137 +52,95 @@
       transform: scale(1.05);
       box-shadow: 0 0 20px rgba(0,0,0,0.5);
     }
+
+    button {
+      padding: 10px;
+      margin-top: 20px;
+      cursor: pointer;
+    }
   </style>
 
 </head>
-<p> Software Developer | AI Automation Developer | n8n Specialist</p>
-<p>I build AI-powered automation systems using n8n, APIs, and LLMs to solve real-world problems.</p>
 
+<body>
 
-<h2 id="contact">Contact</h2>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-<p>Email: joshmikaavvaru1808@gmail.com</p>
-<p>Phone: 8639291529</p>
+  <header>
+    <h1>Joshmika Avvaru</h1>
+    <p>Software Developer | AI Automation Developer | n8n Specialist</p>
+    <p>Building AI-powered automation systems using n8n, APIs, and LLMs</p>
 
-<p>
-<a href="https://github.com/yourusername">GitHub</a>
-</p>
+    <a href="resume.pdf" download>
+      <button>Download Resume</button>
+    </a>
+  </header>
 
-<h2 id="about">About Me</h2>
-<p>
-Final-year Computer Science student specializing in Data Science with a CGPA of 8.60.
-I am passionate about building AI-powered automation systems using n8n, APIs, and LLMs.
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      Final-year Computer Science student specializing in Data Science with a CGPA of 8.60.
+      Passionate about building AI-powered automation systems using n8n, APIs, and LLMs.
 
-I have hands-on experience in developing AI agents, Telegram bots, and workflow automation solutions.
-My focus is on creating intelligent systems that improve efficiency, automate tasks, and generate valuable insights.
+      Experienced in AI agents, Telegram bots, and workflow automation solutions.
+    </p>
+  </section>
 
-I am actively seeking opportunities to contribute to innovative teams in AI, automation, and backend development.
-</p>
+  <section>
+    <h2>Education</h2>
+    <ul>
+      <li>B.Tech in CSE (Data Science) – 8.58 CGPA</li>
+      <li>Intermediate – 69%</li>
+      <li>SSC – 98%</li>
+    </ul>
+  </section>
 
-<h2>Education</h2>
+  <section id="skills">
+    <h2>Skills</h2>
 
-<ul>
-  <li>B.Tech in CSE (Data Science) – 8.58 CGPA</li>
-  <li>Intermediate (MPC) – 69%</li>
-  <li>SSC – 98%</li>
-</ul>
+    <h3>Core Skills</h3>
+    <ul>
+      <li>AI Agents</li>
+      <li>Prompt Engineering</li>
+      <li>n8n Automation</li>
+      <li>API Integration</li>
+    </ul>
 
-<h2>Certifications</h2>
+    <h3>Programming</h3>
+    <ul>
+      <li>Python</li>
+      <li>Java</li>
+      <li>C</li>
+    </ul>
+  </section>
 
-<ul>
-  <li>NPTEL - OOPS Java</li>
-  <li>Python for Data Science</li>
-  <li>The Joy of Computing Python</li>
-  <li>MERN Stack Development</li>
-  <li>Responsive Web Design</li>
-</ul>
+  <section id="projects">
+    <h2>Projects</h2>
 
-<h2 id="skills">Skills</h2>
+    <div class="card">
+      <h3>AI Competitor Research Agent</h3>
+      <p>Built an AI automation system to extract competitor insights using n8n workflows.</p>
+      <a href="https://github.com/JoshmikaAvvaru/AI-agent" target="_blank">🔗 View Project</a>
+    </div>
 
-<h3>Core Skills</h3>
-<ul>
-  <li>AI Agents</li>
-  <li>Prompt Engineering</li>
-  <li>Workflow Automation (n8n)</li>
-  <li>API Integration</li>
-</ul>
+    <div class="card">
+      <h3>Telegram AI Bot</h3>
+      <p>Enhances user prompts and improves AI responses using automation.</p>
+    </div>
 
-<h3>Programming</h3>
-<ul>
-  <li>Python</li>
-  <li>Java</li>
-  <li>C</li>
-</ul>
+  </section>
 
-<h3>Web Technologies</h3>
-<ul>
-  <li>HTML</li>
-  <li>CSS</li>
-</ul>
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: joshmikaavvaru1808@gmail.com</p>
+    <p>Phone: 8639291529</p>
+  </section>
 
-<h3>Tools</h3>
-<ul>
-  <li>Git & GitHub</li>
-  <li>Visual Studio Code</li>
-  <li>Canva</li>
-</ul>
+</body>
 
-<h2 id="projects">Projects</h2>
-
-<div class="card">
-  <h3>AI Competitor Research Agent</h3>
-  <p>
-  Built an AI-powered automation system that extracts competitor insights such as company name, website URL, annual revenue, and net worth.
-
-  Designed multi-step workflows using n8n to automate data collection, processing, and structuring. Integrated APIs and applied prompt engineering techniques to generate accurate and structured outputs.
-  </p>
-
-  <a href="https://github.com/JoshmikaAvvaru/AI-agent" target="_blank">
-    🔗 View Project
-  </a>
-  <img src="ai-agent.png" width="100%" style="border-radius:10px; margin-top:10px;">
-</div>
-
-<div class="card">
-  <h3>Telegram AI Prompt Enhancement Bot</h3>
-  <p>
-  Built a Telegram bot that enhances user prompts before sending them to AI models.
-  Implemented intelligent prompt refinement and automated the workflow using n8n for real-time responses.
-  </p>
-</div>
-
-<div class="card">
-  <h3>Industry Trends Analysis (Tableau)</h3>
-  <p>
-  Analyzed employment and industry trends using Tableau dashboards.
-  Cleaned datasets and created visual insights for decision-making.
-  </p>
-</div>
-
-<div class="card">
-  <h3>Amazon Clone (Frontend)</h3>
-  <p>
-  Built a responsive Amazon homepage using HTML and CSS.
-  Focused on UI design, layout structuring, and responsive web development.
-  </p>
-</div>
-<h2>Internships</h2>
-
-<ul>
-  <li>
-    Web Development Intern – Built responsive websites using HTML & CSS and improved UI design skills.
-  </li>
-
-  <li>
-    Cyber Security Intern – Worked on vulnerability analysis and network monitoring.
-  </li>
-
-  <li>
-    Data Engineering Intern – Gained experience in ETL pipelines and data processing.
-  </li>
-</ul>
-
-
-<a href="resume.pdf" download>
-  <button>Download Resume</button>
-</a>
+</html>
