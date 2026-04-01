@@ -13,6 +13,7 @@
       font-family: 'Open Sans', sans-serif;
       background: linear-gradient(135deg, #0f172a, #020617);
       color: white;
+      overflow-x: hidden;
     }
 
     nav {
@@ -35,6 +36,7 @@
     header {
       text-align: center;
       padding: 100px 20px;
+      animation: fadeIn 1.5s ease-in-out;
     }
 
     header h1 {
@@ -65,6 +67,14 @@
       padding: 20px;
       border-radius: 12px;
       transition: 0.3s;
+      opacity: 0;
+      transform: translateY(50px);
+    }
+
+    .card.show {
+      opacity: 1;
+      transform: translateY(0);
+      transition: all 0.8s ease;
     }
 
     .card:hover {
@@ -92,6 +102,11 @@
       font-weight: 600;
     }
 
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
   </style>
 </head>
 
@@ -107,40 +122,37 @@
 <header>
   <h1>Joshmika Avvaru</h1>
   <p>AI Automation Developer | n8n Specialist</p>
+  <button onclick="window.open('resume.pdf')">Download Resume</button>
 </header>
 
 <section id="about">
   <h2>About Me</h2>
   <p>
-    I build <span class="highlight">AI-powered automation systems</span> using n8n, APIs, and LLMs. Passionate about solving real-world problems with intelligent workflows.
+    I build <span class="highlight">AI-powered automation systems</span> using n8n, APIs, and LLMs.
   </p>
 </section>
 
 <section id="projects">
   <h2>Projects</h2>
-
   <div class="grid">
 
     <div class="card">
       <h3>AI Competitor Research Agent</h3>
       <p><b>Problem:</b> Manual research is slow</p>
-      <p><b>Solution:</b> Automated AI workflow using n8n</p>
-      <p><b>Impact:</b> Reduced time 60min → 1min</p>
-      <a href="https://github.com/JoshmikaAvvaru/AI-agent" target="_blank">View Code</a>
+      <p><b>Solution:</b> Automated AI workflow</p>
+      <p><b>Impact:</b> 60min → 1min</p>
       <img src="images/ai-workflow.png">
     </div>
 
     <div class="card">
       <h3>Telegram AI Bot</h3>
-      <p><b>Problem:</b> Poor AI prompts</p>
-      <p><b>Solution:</b> Prompt enhancement bot</p>
-      <p><b>Impact:</b> Improved output quality</p>
-      <a href="https://github.com/JoshmikaAvvaru/Telegram-image-generator" target="_blank">View Code</a>
+      <p><b>Problem:</b> Weak prompts</p>
+      <p><b>Solution:</b> Prompt enhancer bot</p>
+      <p><b>Impact:</b> Better AI results</p>
       <img src="images/telegram.png">
     </div>
 
   </div>
-
 </section>
 
 <section id="skills">
@@ -148,10 +160,8 @@
   <div class="grid">
     <div class="card">AI Agents</div>
     <div class="card">n8n Automation</div>
-    <div class="card">Prompt Engineering</div>
     <div class="card">APIs</div>
     <div class="card">Python</div>
-    <div class="card">Java</div>
   </div>
 </section>
 
@@ -160,6 +170,21 @@
   <p>Email: joshmikaavvaru1808@gmail.com</p>
 </section>
 
+<script>
+  const cards = document.querySelectorAll('.card');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+      }
+    });
+  }, { threshold: 0.2 });
+
+  cards.forEach(card => {
+    observer.observe(card);
+  });
+</script>
+
 </body>
-  <button onclick="window.open('resume.pdf')">Download Resume</button>
 </html>
