@@ -46,13 +46,19 @@ header {
 }
 
 .profile-img {
-  width: 150px;
-  height: 150px;
+  width: 160px;
+  height: 160px;
   border-radius: 50%;
   object-fit: cover;
+  object-position: center top; /* ensures face focus */
   border: 3px solid #38bdf8;
   box-shadow: 0 0 30px #38bdf8;
   animation: float 3s ease-in-out infinite;
+  transition: 0.3s;
+}
+
+.profile-img:hover {
+  transform: scale(1.08);
 }
 
 @keyframes float {
@@ -85,6 +91,44 @@ section {
 }
 
 .card {
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255,255,255,0.1);
+  padding: 20px;
+  border-radius: 16px;
+  position: relative;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.5s;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(120deg, transparent, rgba(56,189,248,0.2), transparent);
+  transform: rotate(25deg);
+  opacity: 0;
+}
+
+.card:hover::before {
+  opacity: 1;
+  animation: shine 1.5s;
+}
+
+@keyframes shine {
+  0% { transform: translateX(-100%) rotate(25deg); }
+  100% { transform: translateX(100%) rotate(25deg); }
+}
+
+.card:hover {
+  transform: translateY(-12px) scale(1.05);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.7);
+}
   background: rgba(255,255,255,0.05);
   backdrop-filter: blur(10px);
   padding: 20px;
@@ -134,7 +178,7 @@ button {
 </nav>
 
 <header>
-  <img src="images/profile.jpg" class="profile-img">
+  <img src="images/joshmika.jpg" alt="Joshmika Avvaru" class="profile-img">
   <h1>Joshmika Avvaru</h1>
   <p class="typing"></p>
   <button onclick="window.open('resume.pdf')">Download Resume</button>
@@ -150,6 +194,55 @@ button {
   <div class="grid">
     <div class="card">AI Competitor Agent</div>
     <div class="card">Telegram AI Bot</div>
+  </div>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="grid">
+
+    <div class="card">
+      <h3>AI Competitor Research Agent</h3>
+      <p>Automated competitor analysis using n8n workflows, APIs, and LLMs.</p>
+    </div>
+
+    <div class="card">
+      <h3>AI Prompt Enhancement Telegram Bot</h3>
+      <p>Built a bot to improve user prompts and enhance AI responses.</p>
+    </div>
+
+    <div class="card">
+      <h3>Tableau Data Visualization</h3>
+      <p>Analyzed industry trends using dashboards and datasets.</p>
+    </div>
+
+    <div class="card">
+      <h3>Amazon Clone Wireframe</h3>
+      <p>Designed a responsive UI using HTML and CSS.</p>
+    </div>
+
+  </div>
+</section>
+
+<section id="internships">
+  <h2>Internships</h2>
+  <div class="grid">
+
+    <div class="card">
+      <h3>Web Development Intern</h3>
+      <p>Worked on responsive websites using HTML and CSS.</p>
+    </div>
+
+    <div class="card">
+      <h3>Cyber Security Intern</h3>
+      <p>Worked on vulnerability detection and network monitoring.</p>
+    </div>
+
+    <div class="card">
+      <h3>Data Engineering Intern</h3>
+      <p>Worked on ETL processes and data pipelines.</p>
+    </div>
+
   </div>
 </section>
 
@@ -195,3 +288,4 @@ document.addEventListener('mousemove', e=>{
 
 </body>
 </html>
+
