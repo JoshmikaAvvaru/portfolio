@@ -1,122 +1,217 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <title>Joshmika Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Joshmika Avvaru | Portfolio</title>
 
-  <!-- ✅ Open Sans Font Added -->
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
 
- <style>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+      background: linear-gradient(135deg, #0f172a, #020617);
+      color: white;
+      line-height: 1.6;
+    }
 
-html {
-  scroll-behavior: smooth;
-}
+    nav {
+      position: sticky;
+      top: 0;
+      background: rgba(0,0,0,0.6);
+      padding: 15px;
+      text-align: center;
+      backdrop-filter: blur(10px);
+    }
 
-body {
-  margin: 0;
-  font-family: 'Open Sans', sans-serif; /* ✅ Changed here */
-  background: linear-gradient(135deg, #0f172a, #020617);
-  color: white;
-  line-height: 1.6; /* ✅ Added for better readability */
-  letter-spacing: 0.3px;
-}
+    nav a {
+      color: #38bdf8;
+      margin: 0 15px;
+      text-decoration: none;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+    }
 
-nav {
-  background: rgba(0,0,0,0.5);
-  backdrop-filter: blur(10px);
-  padding: 15px;
-  text-align: center;
-  position: sticky;
-  top: 0;
-}
+    header {
+      text-align: center;
+      padding: 80px 20px;
+    }
 
-nav a {
-  margin: 15px;
-  color: #38bdf8;
-  text-decoration: none;
-  font-weight: 600;
-}
+    header h1 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 42px;
+    }
 
-header {
-  text-align: center;
-  padding: 80px 20px;
-}
+    section {
+      max-width: 900px;
+      margin: auto;
+      padding: 50px 20px;
+    }
 
-header h1 {
-  font-size: 40px;
-  font-weight: 700; /* ✅ Bold heading */
-}
+    h2 {
+      font-family: 'Poppins', sans-serif;
+      color: #38bdf8;
+    }
 
-section {
-  padding: 50px;
-  max-width: 900px;
-  margin: auto;
-}
+    h3 {
+      font-family: 'Poppins', sans-serif;
+    }
 
-h2 {
-  font-weight: 600;
-}
+    .card {
+      background: rgba(30,41,59,0.8);
+      padding: 20px;
+      border-radius: 12px;
+      margin: 20px 0;
+    }
 
-.card {
-  background: rgba(30,41,59,0.8);
-  padding: 25px;
-  border-radius: 15px;
-  margin: 20px 0;
-  transition: 0.3s;
-}
+    ul {
+      padding-left: 20px;
+    }
 
-.card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
-}
+    button {
+      padding: 10px 20px;
+      background: #38bdf8;
+      border: none;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+    }
 
-button {
-  padding: 10px 20px;
-  border: none;
-  background: #38bdf8;
-  color: black;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: 600;
-}
-
-button:hover {
-  background: #0ea5e9;
-}
-
-</style>
-
+    footer {
+      text-align: center;
+      padding: 20px;
+      opacity: 0.7;
+    }
+  </style>
 </head>
 
 <body>
 
-  <nav>
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-  </nav>
+<nav>
+  <a href="#about">About</a>
+  <a href="#education">Education</a>
+  <a href="#skills">Skills</a>
+  <a href="#projects">Projects</a>
+  <a href="#internships">Internships</a>
+  <a href="#contact">Contact</a>
+</nav>
 
-  <header>
-    <h1>Joshmika Avvaru</h1>
-    <p>Software Developer | AI Automation Developer | n8n Specialist</p>
-    <p>Building AI-powered automation systems using n8n, APIs, and LLMs</p>
+<header>
+  <h1>Joshmika Avvaru</h1>
+  <p>AI Automation Developer | n8n Specialist</p>
+  <p>Building AI-powered automation systems using n8n, APIs, and LLMs</p>
+  <button onclick="window.open('resume.pdf')">Download Resume</button>
+</header>
 
-    <a href="resume.pdf" download>
-      <button>Download Resume</button>
-    </a>
-  </header>
+<section id="about">
+  <h2>About Me</h2>
+  <p>
+    Driven and results-oriented Computer Science student (Data Science) with strong expertise in AI automation, workflows, and API integrations. Passionate about building intelligent systems that improve efficiency and solve real-world problems.
+  </p>
+</section>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>
-      Final-year Computer Science student specializing in Data Science with a CGPA of 8.60.
-      Passionate about building AI-powered automation systems using n8n, APIs, and LLMs.
+<section id="education">
+  <h2>Education</h2>
+  <div class="card">
+    <p><strong>B.Tech CSE (Data Science)</strong> – KKR & KSR Institute of Technology and Sciences</p>
+    <p>CGPA: 8.58</p>
+  </div>
+  <div class="card">
+    <p><strong>Intermediate (MPC)</strong> – S.V.K.P Jr College</p>
+    <p>69%</p>
+  </div>
+  <div class="card">
+    <p><strong>SSC</strong> – ZPG High School</p>
+    <p>98%</p>
+  </div>
+</section>
 
-      Experienced in AI agents, Telegram bots, and workflow automation solutions.
-    </p>
-  </section>
+<section id="skills">
+  <h2>Skills</h2>
+
+  <div class="card">
+    <h3>Core Skills</h3>
+    <ul>
+      <li>AI Agents</li>
+      <li>Prompt Engineering</li>
+      <li>n8n Automation</li>
+      <li>API Integration</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Programming</h3>
+    <ul>
+      <li>Python</li>
+      <li>Java</li>
+      <li>C</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Tools & Platforms</h3>
+    <ul>
+      <li>Git & GitHub</li>
+      <li>VS Code</li>
+      <li>Canva</li>
+    </ul>
+  </div>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+
+  <div class="card">
+    <h3>AI Competitor Research Agent</h3>
+    <p>Developed an AI-powered system to extract competitor insights like revenue, net worth, and website data using n8n workflows and APIs.</p>
+  </div>
+
+  <div class="card">
+    <h3>AI Prompt Enhancement Telegram Bot</h3>
+    <p>Built a Telegram bot that enhances user prompts and improves AI output using automation workflows.</p>
+  </div>
+
+  <div class="card">
+    <h3>Tableau Data Visualization Project</h3>
+    <p>Analyzed industry and employment trends using Tableau dashboards and datasets.</p>
+  </div>
+
+  <div class="card">
+    <h3>Amazon Clone Wireframe</h3>
+    <p>Created a responsive Amazon homepage clone using HTML and CSS.</p>
+  </div>
+</section>
+
+<section id="internships">
+  <h2>Internships</h2>
+
+  <div class="card">
+    <h3>Web Development Intern</h3>
+    <p>Worked on responsive website design using HTML and CSS.</p>
+  </div>
+
+  <div class="card">
+    <h3>Cyber Security Intern</h3>
+    <p>Worked on vulnerability detection and network monitoring.</p>
+  </div>
+
+  <div class="card">
+    <h3>Data Engineering Intern</h3>
+    <p>Worked on data pipelines and ETL processes.</p>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p>Email: joshmikaavvaru1808@gmail.com</p>
+  <p>Phone: 8639291529</p>
+</section>
+
+<footer>
+  <p>© 2026 Joshmika Avvaru</p>
+</footer>
 
 </body>
 </html>
