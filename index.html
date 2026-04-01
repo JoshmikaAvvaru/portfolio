@@ -1,198 +1,197 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Joshmika Avvaru | Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Joshmika Avvaru | Portfolio</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
 
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Open Sans', sans-serif;
-      background: linear-gradient(135deg, #0f172a, #020617);
-      color: white;
-      overflow-x: hidden;
-    }
+<style>
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  background: linear-gradient(-45deg, #0f172a, #020617, #1e293b, #020617);
+  background-size: 400% 400%;
+  animation: gradientBG 10s ease infinite;
+  color: white;
+  overflow-x: hidden;
+}
 
-    nav {
-      position: sticky;
-      top: 0;
-      background: rgba(0,0,0,0.6);
-      font-family: 'Open Sans', sans-serif;
-      padding: 15px;
-      text-align: center;
-      backdrop-filter: blur(10px);
-    }
+@keyframes gradientBG {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
 
-    nav a {
-      color: #38bdf8;
-      margin: 0 15px;
-      text-decoration: none;
-      font-family: 'Open Sans', sans-serif;
-      font-weight: 600;
-    }
+nav {
+  position: sticky;
+  top: 0;
+  background: rgba(0,0,0,0.5);
+  backdrop-filter: blur(10px);
+  padding: 15px;
+  text-align: center;
+}
 
-    header {
-      text-align: center;
-      padding: 100px 20px;
-      font-family: 'Open Sans', sans-serif;
-      animation: fadeIn 1.5s ease-in-out;
-    }
+nav a {
+  color: #38bdf8;
+  margin: 0 15px;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+}
 
-    header h1 {
-      font-family: 'Poppins', sans-serif;
-      font-size: 48px;
-    }
+header {
+  text-align: center;
+  padding: 120px 20px;
+}
 
-    section {
-      max-width: 1000px;
-      margin: auto;
-      padding: 60px 20px;
-    }
+.profile-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #38bdf8;
+  box-shadow: 0 0 30px #38bdf8;
+  animation: float 3s ease-in-out infinite;
+}
 
-    h2 {
-      font-family: 'Poppins', sans-serif;
-      color: #38bdf8;
-      margin-bottom: 20px;
-    }
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+  100% { transform: translateY(0); }
+}
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-    }
+h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 48px;
+}
 
-    .card {
-      background: rgba(30,41,59,0.9);
-      padding: 20px;
-      border-radius: 12px;
-      transition: 0.3s;
-      opacity: 0;
-      transform: translateY(50px);
-    }
+.typing {
+  color: #38bdf8;
+  font-weight: 600;
+  margin-top: 10px;
+}
 
-    .card.show {
-      opacity: 1;
-      transform: translateY(0);
-      transition: all 0.8s ease;
-    }
+section {
+  max-width: 1000px;
+  margin: auto;
+  padding: 60px 20px;
+}
 
-    .card:hover {
-      transform: translateY(-10px) scale(1.02);
-      box-shadow: 0 15px 40px rgba(0,0,0,0.6);
-    }
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
 
-    .card img {
-      width: 100%;
-      border-radius: 10px;
-      margin-top: 10px;
-    }
+.card {
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  border-radius: 12px;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.5s;
+}
 
-    button {
-      padding: 10px 20px;
-      background: #38bdf8;
-      border: none;
-      border-radius: 8px;
-      font-weight: 600;
-      cursor: pointer;
-    }
+.card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
 
-    .highlight {
-      color: #38bdf8;
-      font-weight: 600;
-    }
+.card:hover {
+  transform: scale(1.05);
+}
 
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(-20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
+.cursor-glow {
+  position: fixed;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(56,189,248,0.2) 0%, transparent 70%);
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+}
 
-  </style>
+button {
+  padding: 10px 20px;
+  background: #38bdf8;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+</style>
 </head>
 
 <body>
+
+<div class="cursor-glow" id="glow"></div>
 
 <nav>
   <a href="#about">About</a>
   <a href="#projects">Projects</a>
   <a href="#skills">Skills</a>
-  <a href="#contact">Contact</a>
 </nav>
 
 <header>
+  <img src="images/profile.jpg" class="profile-img">
   <h1>Joshmika Avvaru</h1>
-  <p> Software Developer | AI Automation Developer | n8n Specialist</p>
+  <p class="typing"></p>
+  <button onclick="window.open('resume.pdf')">Download Resume</button>
 </header>
 
 <section id="about">
-  <h2>About Me</h2>
-  <p>
-    I build <span class="highlight">AI-powered automation systems</span> using n8n, APIs, and LLMs.
-  </p>
+  <h2>About</h2>
+  <p>I build AI-powered systems using automation, APIs and intelligent workflows.</p>
 </section>
 
 <section id="projects">
   <h2>Projects</h2>
   <div class="grid">
-
-    <div class="card">
-      <h3>AI Competitor Research Agent</h3>
-      <p><b>Problem:</b> Manual research is slow</p>
-      <p><b>Solution:</b> Automated AI workflow</p>
-      <p><b>Impact:</b> 60min → 1min</p>
-      <img src="images/ai-workflow.png">
-    </div>
-
-    <div class="card">
-      <h3>Telegram AI Bot</h3>
-      <p><b>Problem:</b> Weak prompts</p>
-      <p><b>Solution:</b> Prompt enhancer bot</p>
-      <p><b>Impact:</b> Better AI results</p>
-      <img src="images/telegram.png">
-    </div>
-
+    <div class="card">AI Competitor Agent</div>
+    <div class="card">Telegram AI Bot</div>
   </div>
 </section>
 
 <section id="skills">
   <h2>Skills</h2>
   <div class="grid">
-    <div class="card">AI Agents</div>
-    <div class="card">n8n Automation</div>
+    <div class="card">AI</div>
+    <div class="card">n8n</div>
     <div class="card">APIs</div>
-     <div class="card">Java</div>
-    <div class="card">Python</div>
-       <div class="card">C</div>
-       <div class="card">HTML</div>
-       <div class="card">CSS</div>
-       <div class="card">SQL</div>
   </div>
 </section>
 
-<section id="contact">
-  <h2>Contact</h2>
-  <p>Email: joshmikaavvaru1808@gmail.com</p>
-  <p>Phone: 8639291529</p>
-</section>
-
 <script>
-  const cards = document.querySelectorAll('.card');
+// typing
+const text = "AI Automation Developer | Builder";
+let i = 0;
+function type(){
+ if(i < text.length){
+  document.querySelector('.typing').innerHTML += text.charAt(i);
+  i++;
+  setTimeout(type,50);
+ }\}
+type();
 
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('show');
-      }
-    });
-  }, { threshold: 0.2 });
+// scroll animation
+const cards = document.querySelectorAll('.card');
+const obs = new IntersectionObserver(entries=>{
+ entries.forEach(e=>{
+  if(e.isIntersecting){
+   e.target.classList.add('show');
+  }
+ });
+});
+cards.forEach(c=>obs.observe(c));
 
-  cards.forEach(card => {
-    observer.observe(card);
-  });
+// cursor glow
+const glow = document.getElementById('glow');
+document.addEventListener('mousemove', e=>{
+ glow.style.left = e.clientX+'px';
+ glow.style.top = e.clientY+'px';
+});
 </script>
 
 </body>
-             <button onclick="window.open('resume.pdf')">Download Resume</button>
 </html>
