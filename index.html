@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -13,234 +14,240 @@
             --accent-color: #3498db;
         }
 
-        /* Gradient Animation Background */
-        body {
-            font-family: "Times Modern", "Helvetica Neue", Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            color: var(--text-dark);
-            background: linear-gradient(-45deg, #ff9a9e, #fecfef, #a1c4fd, #c2e9fb);
-            background-size: 400% 400%;
-            animation: gradientBG 15s ease infinite;
-            line-height: 1.6;
-        }
+```
+    /* Gradient Animation Background */
+    body {
+        font-family: "Times Modern", "Helvetica Neue", Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        color: var(--text-dark);
+        background: linear-gradient(-45deg, #ff9a9e, #fecfef, #a1c4fd, #c2e9fb);
+        background-size: 400% 400%;
+        animation: gradientBG 15s ease infinite;
+        line-height: 1.6;
+    }
 
-        @keyframes gradientBG {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
+    @keyframes gradientBG {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+    }
 
-        /* Layout and Typography */
-        .container {
-            max-width: 900px;
-            margin: 50px auto;
-            background: var(--container-bg);
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-            backdrop-filter: blur(10px);
-        }
+    /* Layout and Typography */
+    .container {
+        max-width: 900px;
+        margin: 50px auto;
+        background: var(--container-bg);
+        padding: 40px;
+        border-radius: 12px;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(10px);
+    }
 
-        header {
-            text-align: center;
-            border-bottom: 2px solid var(--accent-color);
-            padding-bottom: 20px;
-            margin-bottom: 30px;
-        }
+    header {
+        text-align: center;
+        border-bottom: 2px solid var(--accent-color);
+        padding-bottom: 20px;
+        margin-bottom: 30px;
+    }
 
-        h1 {
-            font-size: 3em;
-            margin: 0;
-            letter-spacing: 1px;
-            color: var(--text-dark);
-        }
+    h1 {
+        font-size: 3em;
+        margin: 0;
+        letter-spacing: 1px;
+        color: var(--text-dark);
+    }
 
-        h2 {
-            color: var(--accent-color);
-            border-bottom: 1px solid #ddd;
-            padding-bottom: 5px;
-            margin-top: 30px;
-        }
+    h2 {
+        color: var(--accent-color);
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 5px;
+        margin-top: 30px;
+    }
 
-        h3 {
-            margin-bottom: 5px;
-            color: var(--text-dark);
-        }
+    h3 {
+        margin-bottom: 5px;
+        color: var(--text-dark);
+    }
 
-        p {
-            margin-top: 5px;
-            color: var(--text-light);
-        }
+    p {
+        margin-top: 5px;
+        color: var(--text-light);
+    }
 
-        ul {
-            padding-left: 20px;
-        }
+    ul {
+        padding-left: 20px;
+    }
 
-        li {
-            margin-bottom: 8px;
-            color: var(--text-light);
-        }
+    li {
+        margin-bottom: 8px;
+        color: var(--text-light);
+    }
 
-        /* Utility Classes */
-        .contact-info {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-            margin-top: 15px;
-            font-weight: bold;
-        }
-        
-        .contact-info a {
-            color: var(--accent-color);
-            text-decoration: none;
-        }
+    /* Utility Classes */
+    .contact-info {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+        margin-top: 15px;
+        font-weight: bold;
+    }
+    
+    .contact-info a {
+        color: var(--accent-color);
+        text-decoration: none;
+    }
 
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
+    .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+    }
 
-        .card {
-            background: #ffffff;
-            padding: 15px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-            border-left: 4px solid var(--accent-color);
-            margin-bottom: 15px;
-        }
-    </style>
+    .card {
+        background: #ffffff;
+        padding: 15px;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        border-left: 4px solid var(--accent-color);
+        margin-bottom: 15px;
+    }
+</style>
+```
+
 </head>
 <body>
 
-    <div class="container">
-        <header>
-            <h1>Joshmika Avvaru [cite: 1]</h1>
-            <p style="font-size: 1.2em; max-width: 700px; margin: 15px auto;">
-                Driven and results-oriented professional with 8.58 CGPA seeking to leverage my experience to contribute to the growth and succes of a spirited organisation. [cite: 9]
-            </p>
-            <div class="contact-info">
-                <span>📧 joshmikaavvaru1808@gmail.com [cite: 2]</span>
-                <span>📞 8639291529 [cite: 5]</span>
-            </div>
-            <p>📍 Municipal Office Front Road Bhavanarushinagar Sattenapalle [cite: 3]</p>
-        </header>
+```
+<div class="container">
+    <header>
+        <h1>Joshmika Avvaru</h1>
+        <p style="font-size: 1.2em; max-width: 700px; margin: 15px auto;">
+            Driven and results-oriented professional with 8.58 CGPA seeking to leverage my experience to contribute to the growth and succes of a spirited organisation.
+        </p>
+        <div class="contact-info">
+            <span>📧 joshmikaavvaru1808@gmail.com</span>
+            <span>📞 8639291529</span>
+        </div>
+        <p>📍 Municipal Office Front Road Bhavanarushinagar Sattenapalle</p>
+    </header>
 
-        <h2>Education [cite: 10]</h2>
-        <div class="card">
-            <h3>B.TECH IN COMPUTER SCIENCE AND ENGINEERING WITH DATA SCIENCE [cite: 18]</h3>
-            <p><strong>KKROKSR INSTITUTE OF TECHNOLOGY AND SCIENCES</strong> | Vinjanampadu, Guntur, India [cite: 12, 13, 18]</p>
-            <ul>
-                <li>Timeline: 2022-2026 [cite: 11]</li>
-                <li>Percentage: 78 [cite: 19]</li>
-            </ul>
-        </div>
-        <div class="card">
-            <h3>Intermediate MPC [cite: 20]</h3>
-            <p><strong>S.V.K.P.Jr College</strong> | Sattenapalli, India [cite: 15, 21]</p>
-            <ul>
-                <li>Timeline: 2020-2022 [cite: 14]</li>
-                <li>Percentage: 69 [cite: 22]</li>
-            </ul>
-        </div>
-        <div class="card">
-            <h3>10TH SSC [cite: 23]</h3>
-            <p><strong>Zpg High School</strong> | Sattenapalli, India [cite: 17, 24]</p>
-            <ul>
-                <li>Timeline: 2019-2020 [cite: 16]</li>
-                <li>Percentage: 98 [cite: 24]</li>
-            </ul>
-        </div>
-
-        <h2>Technical Skills [cite: 31]</h2>
-        <div class="skills-grid">
-            <div>
-                <h3>Programming & Web</h3>
-                <ul>
-                    <li>Java, Python, C [cite: 33]</li>
-                    <li>HTML, CSS [cite: 42]</li>
-                </ul>
-            </div>
-            <div>
-                <h3>AI & Automation</h3>
-                <ul>
-                    <li>Al Agents, Prompt Engineering, Response Optimization [cite: 37]</li>
-                    <li>n8n (End-to-end workflow design, execution, optimization) [cite: 44, 45]</li>
-                </ul>
-            </div>
-            <div>
-                <h3>Tools & Integrations</h3>
-                <ul>
-                    <li>Visual Studio Code, Git, GitHub, Canva [cite: 35]</li>
-                    <li>REST APIs, Webhooks, Third-party integrations [cite: 47]</li>
-                </ul>
-            </div>
-        </div>
-
-        <h2>Projects Done [cite: 48]</h2>
-        <div class="card">
-            <h3>Al Prompt Enhancement Telegram Bot [cite: 49]</h3>
-            <p>Built a Telegram bot that enhances user prompts before sending them to Al models by implementing intelligent prompt refinement techniques to improve output quality. Automated the entire interaction pipeline using n8n workflows and ensured smooth real-time responses through optimized processing logic. [cite: 49]</p>
-        </div>
-        <div class="card">
-            <h3>Al-Competitor Research Agent [cite: 49]</h3>
-            <p>Developed an Al-powered agent to extract competitor insights, including revenue, net worth, and website data, by designing automated multi-step workflows for data collection, processing, and structuring. Integrated APIs and applied prompt engineering techniques to enhance accuracy and relevance. [cite: 49]</p>
-        </div>
-        <div class="card">
-            <h3>Tableau Tool Industry and Employment Trends [cite: 49]</h3>
-            <p>Worked as the team lead on a data visualization project using Tableau to analyze industry and employment trends from 2011-2014. Collected and cleaned historical datasets, created interactive dashboards, and identified key market patterns. [cite: 49]</p>
-        </div>
-        <div class="card">
-            <h3>Amazon Clone Wireframe [cite: 49]</h3>
-            <p>Built a responsive Amazon homepage using HTML and CSS, replicating layout and design elements like navbar, banner, and product sections. Improved frontend skills by practicing clean code, UI design, and responsive web layout techniques. [cite: 49]</p>
-        </div>
-
-        <h2>Internships Done [cite: 50]</h2>
-        <div class="card">
-            <h3>Web Development - InternPE [cite: 51]</h3>
-            <ul>
-                <li>Assisted in building and styling responsive websites using HTML and CSS. [cite: 52]</li>
-                <li>Focused on creating clean, wellstructuredcode and visually appealing layouts across multiple screen sizes. [cite: 53]</li>
-                <li>Gained practical experience in implementing designmockups, optimizing page structure for usability, and ensuring cross-browser compatibility. [cite: 54]</li>
-            </ul>
-        </div>
-        <div class="card">
-            <h3>Cyber Security & Ethical Hacking - Lyfaux [cite: 55]</h3>
-            <ul>
-                <li>Assisted in monitoring network activity, identifying vulnerabilities, and supporting threat analysis. [cite: 56]</li>
-                <li>Gained handsonexperience with security tools and best practices in data protection. [cite: 57]</li>
-            </ul>
-        </div>
-        <div class="card">
-            <h3>Data Engineering Intern - AICTE Virtual Internship [cite: 58]</h3>
-            <ul>
-                <li>Worked on data pipelines and ETL processes. [cite: 58]</li>
-            </ul>
-        </div>
-
-        <div class="skills-grid">
-            <div>
-                <h2>Certifications [cite: 25]</h2>
-                <ul>
-                    <li>OOPS Java NPTEL [cite: 26]</li>
-                    <li>The Joy Of Computing Python [cite: 27]</li>
-                    <li>Google Developer Groups [cite: 28]</li>
-                    <li>MERN Stack Development [cite: 29]</li>
-                    <li>BuildingResponsive Landing Page Using HTML & CSS [cite: 30]</li>
-                    <li>Python 101 for DataScience [cite: 40]</li>
-                </ul>
-            </div>
-            <div>
-                <h2>Accomplishments [cite: 60]</h2>
-                <ul>
-                    <li>Blood Donation at TNBC, GUNTUR [cite: 61, 62]</li>
-                    <li>KHO KHO RUNNERS IN KITS-YUVA 2K23 [cite: 63]</li>
-                </ul>
-            </div>
-        </div>
-
+    <h2>Education</h2>
+    <div class="card">
+        <h3>B.TECH IN COMPUTER SCIENCE AND ENGINEERING WITH DATA SCIENCE</h3>
+        <p><strong>KKROKSR INSTITUTE OF TECHNOLOGY AND SCIENCES</strong> | Vinjanampadu, Guntur, India</p>
+        <ul>
+            <li>Timeline: 2022-2026</li>
+            <li>Percentage: 78</li>
+        </ul>
     </div>
+    <div class="card">
+        <h3>Intermediate MPC</h3>
+        <p><strong>S.V.K.P.Jr College</strong> | Sattenapalli, India</p>
+        <ul>
+            <li>Timeline: 2020-2022</li>
+            <li>Percentage: 69</li>
+        </ul>
+    </div>
+    <div class="card">
+        <h3>10TH SSC</h3>
+        <p><strong>Zpg High School</strong> | Sattenapalli, India</p>
+        <ul>
+            <li>Timeline: 2019-2020</li>
+            <li>Percentage: 98</li>
+        </ul>
+    </div>
+
+    <h2>Technical Skills</h2>
+    <div class="skills-grid">
+        <div>
+            <h3>Programming & Web</h3>
+            <ul>
+                <li>Java, Python, C</li>
+                <li>HTML, CSS</li>
+            </ul>
+        </div>
+        <div>
+            <h3>AI & Automation</h3>
+            <ul>
+                <li>Al Agents, Prompt Engineering, Response Optimization</li>
+                <li>n8n (End-to-end workflow design, execution, optimization)</li>
+            </ul>
+        </div>
+        <div>
+            <h3>Tools & Integrations</h3>
+            <ul>
+                <li>Visual Studio Code, Git, GitHub, Canva</li>
+                <li>REST APIs, Webhooks, Third-party integrations</li>
+            </ul>
+        </div>
+    </div>
+
+    <h2>Projects Done</h2>
+    <div class="card">
+        <h3>Al Prompt Enhancement Telegram Bot</h3>
+        <p>Built a Telegram bot that enhances user prompts before sending them to Al models by implementing intelligent prompt refinement techniques to improve output quality. Automated the entire interaction pipeline using n8n workflows and ensured smooth real-time responses through optimized processing logic.</p>
+    </div>
+    <div class="card">
+        <h3>Al-Competitor Research Agent</h3>
+        <p>Developed an Al-powered agent to extract competitor insights, including revenue, net worth, and website data, by designing automated multi-step workflows for data collection, processing, and structuring. Integrated APIs and applied prompt engineering techniques to enhance accuracy and relevance.</p>
+    </div>
+    <div class="card">
+        <h3>Tableau Tool Industry and Employment Trends</h3>
+        <p>Worked as the team lead on a data visualization project using Tableau to analyze industry and employment trends from 2011-2014. Collected and cleaned historical datasets, created interactive dashboards, and identified key market patterns.</p>
+    </div>
+    <div class="card">
+        <h3>Amazon Clone Wireframe</h3>
+        <p>Built a responsive Amazon homepage using HTML and CSS, replicating layout and design elements like navbar, banner, and product sections. Improved frontend skills by practicing clean code, UI design, and responsive web layout techniques.</p>
+    </div>
+
+    <h2>Internships Done</h2>
+    <div class="card">
+        <h3>Web Development - InternPE</h3>
+        <ul>
+            <li>Assisted in building and styling responsive websites using HTML and CSS.</li>
+            <li>Focused on creating clean, wellstructuredcode and visually appealing layouts across multiple screen sizes.</li>
+            <li>Gained practical experience in implementing designmockups, optimizing page structure for usability, and ensuring cross-browser compatibility.</li>
+        </ul>
+    </div>
+    <div class="card">
+        <h3>Cyber Security & Ethical Hacking - Lyfaux</h3>
+        <ul>
+            <li>Assisted in monitoring network activity, identifying vulnerabilities, and supporting threat analysis.</li>
+            <li>Gained handsonexperience with security tools and best practices in data protection.</li>
+        </ul>
+    </div>
+    <div class="card">
+        <h3>Data Engineering Intern - AICTE Virtual Internship</h3>
+        <ul>
+            <li>Worked on data pipelines and ETL processes.</li>
+        </ul>
+    </div>
+
+    <div class="skills-grid">
+        <div>
+            <h2>Certifications</h2>
+            <ul>
+                <li>OOPS Java NPTEL</li>
+                <li>The Joy Of Computing Python</li>
+                <li>Google Developer Groups</li>
+                <li>MERN Stack Development</li>
+                <li>BuildingResponsive Landing Page Using HTML & CSS</li>
+                <li>Python 101 for DataScience</li>
+            </ul>
+        </div>
+        <div>
+            <h2>Accomplishments</h2>
+            <ul>
+                <li>Blood Donation at TNBC, GUNTUR</li>
+                <li>KHO KHO RUNNERS IN KITS-YUVA 2K23</li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+```
+
 </body>
 </html>
